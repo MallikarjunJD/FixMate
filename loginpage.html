@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — Your App</title>
+  <link rel="stylesheet" href="loginpage.css" />
+</head>
+<body>
+  <main class="container" id="main">
+    <section class="card" aria-labelledby="login-heading">
+      <h1 id="login-heading" class="title"> Log in </h1>
+     
+
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="username">Email or username</label>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            inputmode="email"
+            autocomplete="username"
+            required
+            placeholder="you@example.com"
+            aria-describedby="username-error"
+          />
+          <p id="username-error" class="error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="password-wrap">
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+              minlength="6"
+              placeholder="Enter your password"
+              aria-describedby="password-error"
+            />
+            <button type="button" id="toggle-password" aria-label="Show password">
+              👁
+            </button>
+          </div>
+          <p id="password-error" class="error" aria-live="polite"></p>
+        </div>
+
+        <div class="row-between">
+          <label class="remember">
+            <input type="checkbox" id="remember" name="remember" />
+            Remember me
+          </label>
+          <a class="link" href="#" id="forgot-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn primary" id="submit-btn">Sign in</button>
+
+        <div class="or">or</div>
+
+        <button type="button" class="btn secondary" id="demo-btn">Demo login</button>
+
+        <p class="small">Don't have an account? <a class="link" href="#">Sign up</a></p>
+
+        <div class="status" id="status" aria-live="polite" role="status"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="loginpage.js" defer></script>
+</body>
+</html>
