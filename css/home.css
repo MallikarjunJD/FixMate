@@ -1,0 +1,487 @@
+/* ======================
+   FixMate — styles.css
+   Edit colors or spacing in :root
+   ====================== */
+
+:root{
+  --brand: #D08700;         /* your gold */
+  --black-early: #111111;   /* deep black */
+  --muted: #666666;
+  --bg: #ffffff;
+  --card: #ffffff;
+  --max-width: 1200px;
+}
+
+/* basic reset */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color:var(--black-early);
+  background:rgb(148, 145, 138)#fafafa;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* container center */
+.container{
+  width:90%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding-right: 200px;
+  padding-left: 200px;
+
+}
+
+/* ================= HEADER ================= */
+.site-header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:80;
+  background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.1));
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+  background-color: black;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 0;
+  
+}
+
+/* brand */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.logo-mark{
+  width:42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  border-radius:8px;
+  background:var(--brand);
+  color:white;
+  font-weight:700;
+  font-size:16px;
+}
+.brand-name{
+  font-weight:700;
+  font-size:18px;
+  color:#fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.25);
+}
+
+/* nav */
+.site-nav{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.site-nav .nav-link{
+  color: #fff;
+  text-decoration:none;
+  font-weight:600;
+  opacity:0.95;
+  padding:6px 10px;
+  border-radius:6px;
+  transition: all .18s ease;
+}
+.site-nav .nav-link:hover{ background: rgba(255,255,255,0.06); transform:translateY(-1px) }
+.btn-outline{
+  border:1px solid rgba(255,255,255,0.14);
+  padding:6px 10px;
+  border-radius:6px;
+}
+
+/* give some top space for content (because header fixed) */
+main, .section { padding-top:88px; }
+
+/* ================= HERO ================= */
+.hero{
+  position:relative;
+  min-height:78vh;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  align-items:center;
+  color:#fff;
+  margin-top:60px;
+  
+  overflow:hidden;
+  background-image: url("../assets/hero.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  
+}
+.hero-overlay{
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.45) 100%);
+  z-index:1;
+  
+}
+
+/* .hero::before{
+  pointer-events:none
+} */
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding: 48px 0;
+  text-align:center;
+  width:100%;
+  display: block;
+}
+.hero-title{
+  font-size:44px;
+  line-height:1.02;
+  margin:0 auto;
+  max-width:900px;
+  font-weight:800;
+  letter-spacing:0.6px;
+  color:#fff;
+  text-shadow: 0 8px 30px rgba(0,0,0,0.45);
+}
+.hero-sub{
+  color:rgba(255,255,255,0.95);
+  margin-top:12px;
+  font-size:18px;
+}
+.hero-actions{ margin-top:22px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+
+/* buttons */
+.btn-primary{
+  background:var(--brand);
+  color:#111;
+  font-weight:700;
+  padding:12px 22px;
+  border-radius:8px;
+  text-decoration:none;
+  box-shadow: 0 6px 18px rgba(208,135,0,0.18);
+}
+.btn-ghost{
+  background:rgba(255,255,255,0.12);
+  color:#fff;
+  padding:10px 18px;
+  border-radius:8px;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,0.06);
+}
+
+/* ================= SERVICES ================= */
+.section { padding:60px 0; }
+.section-title{ font-size:28px; margin:0; color:var(--black-early); text-align:center; }
+.section-sub{ text-align:center; color:var(--muted); margin-top:8px; }
+
+/* services grid */
+.services-grid{
+  margin-top:28px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:20px;
+}
+.service-card{
+  background:var(--card);
+  padding:22px;
+  text-align:center;
+  border-radius:12px;
+  box-shadow: 0 6px 18px rgba(17,17,17,0.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.service-card:hover{ transform: translateY(-6px); box-shadow: 0 12px 28px rgba(17,17,17,0.08); }
+.service-icon{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  margin:0 auto 12px;
+  display:grid; place-items:center;
+  background: linear-gradient(180deg, rgba(208,135,0,0.15), rgba(208,135,0,0.05));
+  color:var(--brand);
+  font-size:28px;
+}
+
+/* ================= PORTFOLIO ================= */
+.portfolio-grid{
+  margin-top:28px;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:22px;
+}
+.portfolio-item{ background:#fff; border-radius:10px; overflow:hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+.portfolio-item img{ width:100%; height:180px; object-fit:cover; display:block; }
+.portfolio-body{ padding:14px 16px; }
+.portfolio-body h4{ margin:0 0 6px; }
+.portfolio-body p{ margin:0; color:var(--muted); font-size:14px; }
+.portfolio-item:hover{ transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,0.08); transition: all .18s ease; }
+/* ================= TESTIMONIALS ================= */
+.testimonials-row{
+  margin-top:22px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:16px;
+}
+.testimonial-card{
+  background:#fff; padding:18px; border-radius:10px; box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+.quote{ font-style:italic; color:#333; margin:0 0 10px; }
+.t-meta{ color:var(--muted); font-size:13px; }
+
+/* ================= CONTACT ================= */
+.contact-wrap{
+  display:grid;
+  grid-template-columns: 1fr 420px;
+  gap:28px;
+  align-items:start;
+}
+.contact-left{ padding-right:10px; }
+.contact-info{ margin-top:12px; color:var(--muted); line-height:1.7; }
+
+.contact-form{
+  background:#fff; padding:18px; border-radius:10px; box-shadow:0 8px 20px rgba(0,0,0,0.06);
+  display:flex; flex-direction:column; gap:12px;
+}
+.contact-form input, .contact-form select, .contact-form textarea{
+  padding:10px 12px; border:1px solid #e6e6e6; border-radius:6px; font-size:14px;
+}
+.contact-form textarea{ resize:vertical; min-height:100px; }
+.contact-form .btn-primary{ width:100%; text-align:center; }
+
+/* ================= FOOTER ================= */
+.site-footer{
+  padding:18px 0; background:#111; color:#eee; margin-top:30px;
+}
+.footer-inner{ display:flex; justify-content:space-between; gap:12px; align-items:center; }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:900px){
+  .brand-name{ display:none; } /* compact brand on small screens */
+  .header-inner{ padding:10px 0; }
+  .hero-title{ font-size:32px; padding:0 12px; }
+  .contact-wrap{ grid-template-columns:1fr; }
+  .site-nav{ display:none; } /* keep header simple, you can add mobile nav later */
+}
+
+@media (max-width:520px){
+  .logo-mark{ width:36px; height:36px; font-size:14px; }
+  .hero-title{ font-size:24px; }
+  .services-grid{ grid-template-columns:1fr; }
+  .portfolio-grid{ grid-template-columns:1fr; }
+  .testimonials-row{ grid-template-columns:1fr; }
+}
+
+/* Search bar wrapper */
+.ai-search-container {
+    position: relative;
+    width: 60%;
+    max-width: 600px;
+    margin: 20px auto 0;
+    /* Edited */
+    z-index: 9999;
+    opacity: 0.3;
+    bottom: 50px;
+}
+
+/* Input box */
+.ai-search-container input {
+    width: 100%;
+    padding: 14px 45px 14px 18px;
+    border-radius: 30px;
+    border: 2px solid rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.2);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    backdrop-filter: blur(5px);
+    
+}
+
+.ai-search-container input::placeholder {
+    color: rgba(255,255,255,0.8);
+}
+
+/* Search Icon */
+.search-icon {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: white;
+    pointer-events: none;
+}
+
+/* Suggestions dropdown */
+.suggestions-box {
+    margin-top: 6px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    padding: 8px 0;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+/* each suggestion */
+.suggestion-item {
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #333;
+}
+
+.suggestion-item:hover {
+    background: #f2f2f2;
+}
+
+/* hide class */
+.hidden {
+    display: none;
+}
+
+/* ============== Dark mode overrides (safe to append) ============== */
+/* These rules apply only when the .dark class is added on <html> (your JS does that) */
+
+/* Smooth color transitions */
+.site-header,
+.hero-overlay,
+.hero-content,
+.service-card,
+.portfolio-item,
+.testimonial-card,
+.contact-form,
+.contact-left,
+.footer-inner,
+.ai-search-container input,
+.suggestions-box,
+.btn-primary,
+.btn-ghost {
+  transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease,
+              box-shadow 250ms ease, transform 200ms ease;
+}
+
+/* Base page */
+.dark body,
+html.dark body {
+  background: #0b0b0d;          /* deep page background */
+  color: #e6e6e6;               /* light text */
+  padding: inherit;
+}
+
+/* Header */
+html.dark .site-header {
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.45));
+  border-bottom-color: rgba(255,255,255,0.03);
+}
+html.dark .site-nav .nav-link,
+html.dark .brand-name {
+  color: #f3f3f3;
+}
+
+/* Hero overlay: slightly stronger in dark */
+html.dark .hero-overlay {
+  background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.7) 100%);
+}
+
+/* Buttons */
+html.dark .btn-primary {
+  /* keep brand color but slightly brighter effect */
+  background: var(--brand);
+  color: #111;
+  box-shadow: 0 6px 18px rgba(208,135,0,0.22);
+}
+html.dark .btn-ghost {
+  background: rgba(255,255,255,0.06);
+  color: #eee;
+  border-color: rgba(255,255,255,0.06);
+}
+
+/* Cards / panels */
+html.dark .service-card,
+html.dark .portfolio-item,
+html.dark .testimonial-card,
+html.dark .contact-form {
+  background: #111217;
+  color: #e6e6e6;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Portfolio item image overlay (if you later add overlay) */
+html.dark .portfolio-item img {
+  filter: brightness(0.85);
+}
+
+/* Contact form inputs */
+html.dark .contact-form input,
+html.dark .contact-form select,
+html.dark .contact-form textarea,
+html.dark .ai-search-container input {
+  background: #0f1113;
+  color: #e6e6e6;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Suggestions dropdown */
+html.dark .suggestions-box {
+  background: #0b0b0d;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+html.dark .suggestion-item { color: #e6e6e6; }
+html.dark .suggestion-item:hover { background: rgba(255,255,255,0.03); }
+
+/* Hero text tweaks */
+html.dark .hero-title,
+html.dark .hero-sub { color: #fff; text-shadow: 0 8px 28px rgba(0,0,0,0.7); }
+
+/* small meta / muted text */
+html.dark .t-meta,
+html.dark .section-sub,
+html.dark .portfolio-body p,
+html.dark .contact-info {
+  color: #bdbdbd;
+}
+
+/* Footer */
+html.dark .site-footer {
+  background: #060607;
+  color: #dcdcdc;
+}
+html.dark .site-footer a { color: #f3f3f3; }
+
+/* Logo mark keep brand (contrasting) */
+html.dark .logo-mark {
+  background: var(--brand);
+  color: #111;
+  box-shadow: 0 6px 18px rgba(208,135,0,0.14);
+}
+
+/* Navbar outline button inverted */
+html.dark .btn-outline {
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+/* Ensure hero elements are above overlay */
+html.dark .hero-content,
+html.dark .ai-search-container { z-index: 3; }
+
+/* Mobile tweaks: ensure readability */
+@media (max-width:900px){
+  html.dark .hero-title { text-shadow: 0 6px 20px rgba(0,0,0,0.7); }
+}
+
+/* ============== end dark mode block ============== */

@@ -1,3 +1,7 @@
+body{
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
 .active-nav {
   background: #ebd125;
   color: white;
@@ -328,7 +332,8 @@ input:checked + .slider:before {
 }
 
 #user{
-    margin-left:1000px ;
+    position: absolute;
+    left: 1390px;
 }
 
 
@@ -340,10 +345,9 @@ input:checked + .slider:before {
 
 .profile-btn {
     padding: 10px 15px;
-    background: gray 100;
-    color: #CA8A04;
-    border: none;
-    border-radius: 8px;
+   text-decoration: underline;
+    color: #ffffff;
+    
     cursor: pointer;
 }
 
@@ -389,4 +393,15 @@ input:checked + .slider:before {
 }
 
 
-
+.logo-mark{
+  width:42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  border-radius:8px;
+  background:var(--brand);
+  color:white;
+  font-weight:700;
+  font-size:16px;
+  background-color: rgb(208, 135, 0)
+}

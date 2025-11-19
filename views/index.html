@@ -10,22 +10,24 @@
 
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="bg-gray-100">
 
   <!-- ✅ HEADER -->
-  <header class="w-full bg-yellow-600 text-white flex items-center justify-between px-6 py-4 shadow">
+  <header class="w-full bg-black  text-white flex items-center justify-between px-6 py-4 shadow">
     <div class="flex items-center gap-3">
-      <img src="https://dummyimage.com/40x40/fff/000&text=L" class="w-10 h-10 rounded-full" alt="logo">
+      <div class="logo-mark">FM</div>
       <h1 class="text-xl font-semibold">FixMate Admin Panel</h1>
     </div>
 
-<div class="profile-menu-container" >
-  <button class="bg-white text-yellow-600 px-4 py-2 rounded shadow hover:bg-gray-100 profile-btn" id="user">
-     <i class="fa-regular fa-user"></i> Profile
+
+   
+<div class="profile-menu-container" id="user">
+   <button class="text-yellow-600 px-4 py-2 hover:text-white-600 px-4 py-2" >
+     <i class="fa-regular fa-user"></i> 
     </button>
     <div class="profile-popup">
         <ul>
@@ -52,15 +54,15 @@
 
 
 
-     <button class="bg-white text-yellow-600 px-4 py-2 rounded shadow hover:bg-gray-100">
-     <i class="fa-regular fa-house"></i> Home
+     <button class="text-yellow-600 px-4 py-2 hover:text-white-600 px-4 py-2">
+     <i class="fa-regular fa-house"></i>
     </button>
   </header>
 
   <!-- MAIN WRAPPER -->
   <div class="flex">
 
-    <!-- ✅ SIDEBAR -->
+    <!--  SIDEBAR -->
     <nav class="w-64 bg-white shadow h-screen p-5 space-y-2">
       <button class="nav-btn w-full text-left px-4 py-2 rounded hover:bg-yellow-100"
               onclick="showSection('dashboard')">
@@ -111,7 +113,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
-          <!-- 🔵 Card 1: Requests -->
+          <!--  Card 1: Requests -->
           <div onclick="showSection('requests')" 
             class="cursor-pointer bg-white p-6 rounded-xl shadow hover:bg-yellow-100 transition">
             
@@ -119,28 +121,28 @@
             <p class="text-gray-600">View & manage service requests</p>
           </div>
 
-          <!-- 🟢 card 2: Workers -->
+          <!--  card 2: Workers -->
           <div onclick="showSection('workers')" 
             class="cursor-pointer bg-white p-6 rounded-xl shadow hover:bg-yellow-100 transition">
             <h3 class="text-xl font-semibold"><i class="fa-solid fa-people-group"></i>   Workers / Executives</h3>
             <p class="text-gray-600">Manage field workers</p>
           </div>
 
-          <!-- 🟡 card 3: Customers -->
+          <!--  card 3: Customers -->
           <div onclick="showSection('customers')" 
             class="cursor-pointer bg-white p-6 rounded-xl shadow hover:bg-yellow-100 transition">
             <h3 class="text-xl font-semibold"><i class="fa-solid fa-person-circle-exclamation"></i>    Customers</h3>
             <p class="text-gray-600">View customer records</p>
           </div>
 
-          <!-- 🔴 card 4: Reports -->
+          <!--  card 4: Reports -->
           <div onclick="showSection('reports')" 
             class="cursor-pointer bg-white p-6 rounded-xl shadow hover:bg-yellow-100 transition">
             <h3 class="text-xl font-semibold"> <i class="fa-solid fa-chart-area"></i>      Reports & Analytics</h3>
             <p class="text-gray-600">Track statistics & graphs</p>
           </div>
 
-          <!-- ⚙️ card 5: Settings -->
+          <!--  card 5: Settings -->
           <div onclick="showSection('settings')" 
             class="cursor-pointer bg-white p-6 rounded-xl shadow hover:bg-yellow-100 transition">
             <h3 class="text-xl font-semibold"><i class="fa-solid fa-gears"></i>     Settings</h3>
@@ -567,6 +569,6 @@
 
     </main>
   </div>
-  <script src="js/script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>
