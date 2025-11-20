@@ -1,0 +1,131 @@
+/* ORIGINAL ADMIN CSS KEPT */
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: rgb(218, 210, 199);
+}
+
+.active-nav {
+  background: #ebd125;
+  color: white;
+}
+
+/* Popup profile */
+.profile-menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-popup {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 180px;
+  background: rgb(37, 35, 35);
+  padding: 10px 0;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: 0.25s ease;
+}
+
+.profile-menu-container:hover .profile-popup {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.profile-popup ul {
+  list-style: none;
+}
+
+.profile-popup li {
+  padding: 10px 15px;
+  cursor: pointer;
+  color: white;
+}
+
+.profile-popup li:hover {
+  background: #CA8A04;
+}
+
+/* Switch Toggle */
+.switch {
+  position: relative;
+  width: 46px;
+  height: 25px;
+  display: inline-block;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0; left: 0; right: 0; bottom: 0;
+  transition: .3s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+input:checked + .slider {
+  background-color: #4caf50;
+}
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Request Cards */
+.request-card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.request-meta {
+  font-size: 14px;
+  color: #444;
+}
+
+.btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-accept { background: #16a34a; color: white; }
+.btn-reject { background: #ef4444; color: white; }
+
+.time-left {
+  font-weight: 700;
+  color: #b91c1c;
+}
+
+.logo-mark {
+width:42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  border-radius:8px;
+  background:var(--brand);
+  color:white;
+  font-weight:700;
+  font-size:16px;
+  background-color: rgb(208, 135, 0)
+}

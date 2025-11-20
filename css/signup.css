@@ -1,34 +1,12 @@
-/* Wrapper */
-
-.login-wrapper {
+/* Fade animation */
+.signup-wrapper {
     animation: fadeIn 0.4s ease;
     background-color: rgb(221, 213, 202);
 }
 
 /* Card */
-.login-card {
+.signup-card {
     backdrop-filter: blur(8px);
-}
-
-/* Tabs */
-.tab-btn {
-    flex: 1;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    text-align: center;
-    transition: 0.25s;
-    color: #333;
-}
-
-.dark .tab-btn {
-    color: #eaeaea;
-}
-
-.active-tab {
-    background: #D08700;
-    color: #111 !important;
-    box-shadow: 0 4px 10px rgba(208, 135, 0, 0.35);
 }
 
 /* Inputs */
@@ -50,10 +28,10 @@
 .input-box:focus {
     border-color: #D08700;
     outline: none;
-    box-shadow: 0 0 5px rgba(208, 135, 0, 0.4);
+    box-shadow: 0 0 5px rgba(208,135,0,0.4);
 }
 
-/* Submit Button */
+/* Button */
 .submit-btn {
     width: 100%;
     background: #D08700;
@@ -66,10 +44,13 @@
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(208, 135, 0, 0.35);
+    box-shadow: 0 6px 18px rgba(208,135,0,0.35);
 }
 
+/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    to   { opacity: 1; transform: translateY(0); }
 }
+
+/* Back Arrow */

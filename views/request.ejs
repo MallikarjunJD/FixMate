@@ -1,0 +1,60 @@
+<!-- book.ejs : Combined Full Booking + Quick Request Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Service</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Request for <%= service %></h2>
+
+    <% if (type === 'full') { %>
+      <!-- Full Booking Form -->
+      <form action="/book-service" method="POST" enctype="multipart/form-data" class="form-box">
+        <input type="hidden" name="service" value="<%= service %>" />
+
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Phone</label>
+        <input type="text" name="phone" required>
+
+        <label>Email</label>
+        <input type="email" name="email">
+
+        <label>Address</label>
+        <textarea name="address"></textarea>
+
+        <label>Preferred Date & Time</label>
+        <input type="datetime-local" name="datetime">
+
+        <label>Description (Optional)</label>
+        <textarea name="description"></textarea>
+
+        <label>Upload Image (Optional)</label>
+        <input type="file" name="image">
+
+        <button type="submit">Submit Booking</button>
+      </form>
+
+    <% } else { %>
+      <!-- Quick Request Form -->
+      <form action="/quick-request" method="POST" class="form-box">
+        <input type="hidden" name="service" value="<%= service %>" />
+
+        <label>Phone</label>
+        <input type="text" name="phone" required>
+
+        <label>Short Note (Optional)</label>
+        <textarea name="note"></textarea>
+
+        <button type="submit">Send Quick Request</button>
+      </form>
+    <% } %>
+
+  </div>
+</body>
+</html>
